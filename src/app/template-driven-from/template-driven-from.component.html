@@ -1,0 +1,45 @@
+<div class="container">
+    <h3 class="heading">Template Driven Form :</h3>
+    <div class="desc">
+        Most work is done in HTML templates.
+        <p>2.TDF uses directives &nbsp;&nbsp;&nbsp;&nbsp; 3.Two-way binding with ngModel &nbsp;&nbsp;&nbsp;&nbsp; 4.Difficult to handle when the form is complex and difficult to handle validation.</p> 
+    
+    </div>
+    <div  class="row mt-5" >
+        <div class="col-md-5 m-auto">
+            <div class="card p-4">
+                <form  #userForm="ngForm" (ngSubmit)="submitForm(userForm.value)">
+                <mat-form-field appearance="outline" class="form-width">
+                    <mat-label>Name</mat-label>
+                    <input matInput type="text" name="name" ngModel="name">
+                    <mat-error>Name field containe alphabatical charaters only</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline"  class="form-width">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" name="email" ngModel="email">
+                    <mat-error>Please enter valid email</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline"  class="form-width">
+                    <mat-label>Mobile</mat-label>
+                    <input matInput type="text" name="mobile" ngModel="mobile">
+                    <mat-error>Mobile field contains only numerics value</mat-error>
+                    <mat-error>Mobile field length should be 10 digits only</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline"  class="form-width">
+                    <mat-label>Select Framwork</mat-label>
+                    <mat-select name="framwork" ngModel="framwork">
+                      <mat-option >Select Framwork</mat-option>
+                      <mat-option value="{{framwork}}" *ngFor="let framwork of framworks">{{framwork}}</mat-option>
+                      
+                    </mat-select>
+                    <mat-error >Please choose an animal</mat-error>
+                  </mat-form-field>
+                <button mat-button class="btn">Sumbit</button>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
