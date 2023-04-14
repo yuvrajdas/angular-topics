@@ -27,6 +27,8 @@ import {MatChipsModule} from '@angular/material/chips';
 import { ChartjsComponent } from './chartjs/chartjs.component';
 import { NgChartsModule } from 'ng2-charts';
 import { InputDecoratorComponent } from './input-decorator/input-decorator.component';
+import { AComponentComponent } from './a-component/a-component.component';
+import { BComponentComponent } from './b-component/b-component.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +43,8 @@ import { InputDecoratorComponent } from './input-decorator/input-decorator.compo
     SearchFilterationComponent,
     ChartjsComponent,
     InputDecoratorComponent,
+    AComponentComponent,
+    BComponentComponent,
   ],
   imports: [
     BrowserModule,
