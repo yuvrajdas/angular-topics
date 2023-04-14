@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-input-decorator',
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class InputDecoratorComponent implements OnInit {
 
   constructor() { }
-
+  @Input() appdata:any;
   ngOnInit(): void {
   }
 

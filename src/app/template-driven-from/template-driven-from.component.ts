@@ -9,23 +9,24 @@ export class TemplateDrivenFromComponent implements OnInit {
 
   constructor() { }
   user:User = {
-    name: undefined,
-    emai: undefined,
-    mobile: undefined,
-    framwork: undefined
+    name: '',
+    email: '',
+    mobile: '',
+    framwork: ''
   }
   framworks= ['React','Angular','Vue','JQuery'];
   ngOnInit(): void {
   }
   submitForm(formdata:any){
-    console.log(formdata);
+    console.log(formdata.controls.email.errors
+      , "SDFAaaaaaaaaaa");
     
   }
 }
 
 export class User {
   name:string | undefined;
-  emai:string | undefined;
-  mobile:number | undefined;
+  email:string | undefined;
+  mobile:string | undefined;
   framwork:string | undefined;
 }

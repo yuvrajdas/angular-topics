@@ -1,9 +1,18 @@
-<ul>
+<!-- <ul>
   <li><button mat-button class="btn" routerLink="http-interceptor">HttpInterceptor</button></li>
   <li><button mat-button class="btn" routerLink="template-driven-from">Template Driven Form</button></li>
   <li><button mat-button class="btn" routerLink="reactive-form">Reactive Form</button></li>
   <li><button mat-button class="btn" routerLink="input-decorator">Input Decorator</button></li>
   <li><button mat-button class="btn" routerLink="output-decorator">Output Decorator</button></li>
   <li><button mat-button class="btn" routerLink="delete-multiple-records">Delete Multi Records</button></li>
-</ul>
+  <li><button mat-button class="btn" routerLink="generic-function">Generic Function</button></li>
+  <li><button mat-button class="btn" routerLink="search-filteration">Search Filteration</button></li>
+</ul> -->
+  <app-output-decorator (childCData)="onchange($event)"></app-output-decorator>  
+<br><br><br> 
+  <h3>Parent Component</h3>
+  {{dataOfParentCom}}
+<!-- <app-chartjs></app-chartjs> -->
 <router-outlet></router-outlet>
+<hr>
+<app-input-decorator [appdata]="appComponentData"></app-input-decorator>

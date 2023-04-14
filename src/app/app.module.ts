@@ -9,23 +9,38 @@ import { HeadersInterceptor } from './headers.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TemplateDrivenFromComponent } from './template-driven-from/template-driven-from.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
-import { InputDecoratorComponent } from './input-decorator/input-decorator.component';
 import { OutputDecoratorComponent } from './output-decorator/output-decorator.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
-import { FormsModule } from '@angular/forms';
+ 
 import { DeleteMultipleRecordsComponent } from './delete-multiple-records/delete-multiple-records.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { GenericFunctionComponent } from './generic-function/generic-function.component';
+import { ProductDashboardComponent } from './content-projection/product-dashboard/product-dashboard.component';
+import { ProductWidgeComponent } from './content-projection/product-widge/product-widge.component';
+import { SearchFilterationComponent } from './search-filteration/search-filteration.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatIconModule} from '@angular/material/icon';
+import {MatChipsModule} from '@angular/material/chips';
+import { ChartjsComponent } from './chartjs/chartjs.component';
+import { NgChartsModule } from 'ng2-charts';
+import { InputDecoratorComponent } from './input-decorator/input-decorator.component';
 @NgModule({
   declarations: [
     AppComponent,
     HttpInterceptorComponent,
     TemplateDrivenFromComponent,
     ReactiveFormComponent,
-    InputDecoratorComponent,
     OutputDecoratorComponent,
-    DeleteMultipleRecordsComponent
+    DeleteMultipleRecordsComponent,
+    GenericFunctionComponent,
+    ProductDashboardComponent,
+    ProductWidgeComponent,
+    SearchFilterationComponent,
+    ChartjsComponent,
+    InputDecoratorComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +52,12 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatSelectModule,
     FormsModule,
     MatTableModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule,
+    MatIconModule,
+    MatChipsModule,
+    NgChartsModule
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS, useClass:HeadersInterceptor, multi:true}

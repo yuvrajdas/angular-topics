@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-output-decorator',
@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class OutputDecoratorComponent implements OnInit {
 
   constructor() { }
-
+  @Output() childCData = new EventEmitter<any>();
+  inputValue = ''
   ngOnInit(): void {
   }
-
+  name!:any;
+  changeInputValue(){
+    this.childCData.emit(this.inputValue);
+  }
 }

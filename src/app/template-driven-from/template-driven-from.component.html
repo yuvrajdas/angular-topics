@@ -8,34 +8,36 @@
     <div  class="row mt-5" >
         <div class="col-md-5 m-auto">
             <div class="card p-4">
-                <form  #userForm="ngForm" (ngSubmit)="submitForm(userForm.value)">
+                {{user | json}}
+                <form  #userForm="ngForm" (ngSubmit)="submitForm(userForm)">
                 <mat-form-field appearance="outline" class="form-width">
                     <mat-label>Name</mat-label>
-                    <input matInput type="text" name="name" ngModel="name">
-                    <mat-error>Name field containe alphabatical charaters only</mat-error>
+                    <input matInput type="text" #name="ngModel" name="name" [(ngModel)]="user.name" required>
+                    <mat-error *ngIf="name.touched && name.errors?.['required'] || userForm.invalid">Name field is required</mat-error>
+                    <mat-error *ngIf="name.touched  || userForm.invalid">Name field containe alphabatical charaters only</mat-error>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline"  class="form-width">
                     <mat-label>Email</mat-label>
-                    <input matInput type="email" name="email" ngModel="email">
+                    <input matInput type="email" name="email" [(ngModel)]="user.email" required >
                     <mat-error>Please enter valid email</mat-error>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline"  class="form-width">
                     <mat-label>Mobile</mat-label>
-                    <input matInput type="text" name="mobile" ngModel="mobile">
+                    <input matInput type="text" name="mobile" [(ngModel)]="user.mobile" required >
                     <mat-error>Mobile field contains only numerics value</mat-error>
                     <mat-error>Mobile field length should be 10 digits only</mat-error>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline"  class="form-width">
                     <mat-label>Select Framwork</mat-label>
-                    <mat-select name="framwork" ngModel="framwork">
+                    <mat-select name="framwork" [(ngModel)]="user.framwork" required >
                       <mat-option >Select Framwork</mat-option>
                       <mat-option value="{{framwork}}" *ngFor="let framwork of framworks">{{framwork}}</mat-option>
                       
                     </mat-select>
-                    <mat-error >Please choose an animal</mat-error>
+                    <mat-error >Please choose an option</mat-error>
                   </mat-form-field>
                 <button mat-button class="btn">Sumbit</button>
             </form>

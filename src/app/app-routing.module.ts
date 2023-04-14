@@ -4,8 +4,9 @@ import { HttpInterceptorComponent } from './http-interceptor/http-interceptor.co
 import { TemplateDrivenFromComponent } from './template-driven-from/template-driven-from.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { OutputDecoratorComponent } from './output-decorator/output-decorator.component';
-import { InputDecoratorComponent } from './input-decorator/input-decorator.component';
 import { DeleteMultipleRecordsComponent } from './delete-multiple-records/delete-multiple-records.component';
+import { GenericFunctionComponent } from './generic-function/generic-function.component';
+import { SearchFilterationComponent } from './search-filteration/search-filteration.component';
 
 const routes: Routes = [
   {
@@ -25,12 +26,16 @@ const routes: Routes = [
     component:OutputDecoratorComponent
   },
   {
-    path:'input-decorator',
-    component:InputDecoratorComponent
-  },
-  {
     path:'delete-multiple-records',
     component:DeleteMultipleRecordsComponent
+  },
+  {
+    path:'generic-function',
+    component:GenericFunctionComponent
+  }, 
+  {
+    path:'search-filteration', 
+    component:SearchFilterationComponent
   }
 ];
 
