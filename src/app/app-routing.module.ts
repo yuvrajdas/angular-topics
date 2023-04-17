@@ -7,7 +7,6 @@ import { OutputDecoratorComponent } from './output-decorator/output-decorator.co
 import { DeleteMultipleRecordsComponent } from './delete-multiple-records/delete-multiple-records.component';
 import { GenericFunctionComponent } from './generic-function/generic-function.component';
 import { SearchFilterationComponent } from './search-filteration/search-filteration.component';
-import { ShadowDomComponent } from './shadow-dom/shadow-dom.component';
 
 const routes: Routes = [
   {
@@ -37,10 +36,6 @@ const routes: Routes = [
   {
     path:'search-filteration', 
     component:SearchFilterationComponent
-  },
-  {
-    path:'shadow-dom',
-    component:ShadowDomComponent
   }
 ];
 
