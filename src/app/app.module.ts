@@ -29,6 +29,7 @@ import { NgChartsModule } from 'ng2-charts';
 import { InputDecoratorComponent } from './input-decorator/input-decorator.component';
 import { AComponentComponent } from './a-component/a-component.component';
 import { BComponentComponent } from './b-component/b-component.component';
+import { ShadowDomComponent } from './shadow-dom/shadow-dom.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +46,7 @@ import { BComponentComponent } from './b-component/b-component.component';
     InputDecoratorComponent,
     AComponentComponent,
     BComponentComponent,
+    ShadowDomComponent,
   ],
   imports: [
     BrowserModule,
