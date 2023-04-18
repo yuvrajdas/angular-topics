@@ -8,6 +8,8 @@ import { DeleteMultipleRecordsComponent } from './delete-multiple-records/delete
 import { GenericFunctionComponent } from './generic-function/generic-function.component';
 import { SearchFilterationComponent } from './search-filteration/search-filteration.component';
 import { ShadowDomComponent } from './shadow-dom/shadow-dom.component';
+import { NgtemplateComponent } from './ngtemplate/ngtemplate.component';
+import { MatchipComponent } from './matchip/matchip.component';
 
 const routes: Routes = [
   {
@@ -41,6 +43,14 @@ const routes: Routes = [
   {
     path:'shadow-dom',
     component:ShadowDomComponent
+  },
+  {
+    path:'ng-template',
+    component:NgtemplateComponent
+  },
+  {
+    path:"matchip",
+    component:MatchipComponent
   }
 ];
 

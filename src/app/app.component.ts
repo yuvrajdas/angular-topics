@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -9,6 +10,7 @@ import { environment } from 'src/environments/environment';
 export class AppComponent {
   title = 'angular-topics';
   dataOfParentCom!:any;
+  constructor(private router:Router){}
   appComponentData = {
     name:'Aman',
     college:'CSVTU',
@@ -20,5 +22,10 @@ export class AppComponent {
   }
   onchange(event:any){
     this.dataOfParentCom = event;
+  }
+  changeRouter(route:any){
+    if(!route) return;
+    
+    this.router.navigateByUrl(route.target.value);
   }
 }

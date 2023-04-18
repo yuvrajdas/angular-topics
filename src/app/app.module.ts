@@ -12,7 +12,6 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { OutputDecoratorComponent } from './output-decorator/output-decorator.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
- 
 import { DeleteMultipleRecordsComponent } from './delete-multiple-records/delete-multiple-records.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -30,6 +29,8 @@ import { InputDecoratorComponent } from './input-decorator/input-decorator.compo
 import { AComponentComponent } from './a-component/a-component.component';
 import { BComponentComponent } from './b-component/b-component.component';
 import { ShadowDomComponent } from './shadow-dom/shadow-dom.component';
+import { NgtemplateComponent } from './ngtemplate/ngtemplate.component';
+import { MatchipComponent } from './matchip/matchip.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +48,8 @@ import { ShadowDomComponent } from './shadow-dom/shadow-dom.component';
     AComponentComponent,
     BComponentComponent,
     ShadowDomComponent,
+    NgtemplateComponent,
+    MatchipComponent,
   ],
   imports: [
     BrowserModule,

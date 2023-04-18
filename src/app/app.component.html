@@ -1,19 +1,23 @@
-<ul>
-  <li><button mat-button class="btn" routerLink="http-interceptor">HttpInterceptor</button></li>
-  <li><button mat-button class="btn" routerLink="template-driven-from">Template Driven Form</button></li>
-  <li><button mat-button class="btn" routerLink="reactive-form">Reactive Form</button></li>
-  <li><button mat-button class="btn" routerLink="input-decorator">Input Decorator</button></li>
-  <li><button mat-button class="btn" routerLink="output-decorator">Output Decorator</button></li>
-  <li><button mat-button class="btn" routerLink="delete-multiple-records">Delete Multi Records</button></li>
-  <li><button mat-button class="btn" routerLink="generic-function">Generic Function</button></li>
-  <li><button mat-button class="btn" routerLink="search-filteration">Search Filteration</button></li>
-  <li><button mat-button class="btn" routerLink="shadow-dom">Shadow DOM</button></li>
-</ul> 
-  <app-output-decorator (childCData)="onchange($event)"></app-output-decorator>  
+ <select (change)="changeRouter($event)">
+  <option>Select Topics</option>
+  <option value="http-interceptor" >Http Interceptor</option>
+  <option value="template-driven-from">Template Driven Form</option>
+  <option value="reactive-form">Reactive Form</option>
+  <option value="input-decorator">Input Decorator</option>
+  <option value="output-decorator">Output Decorator</option>
+  <option value="delete-multiple-records">Delete Multi Records</option>
+  <option value="generic-function">Generic Function</option>
+  <option value="search-filteration">Search Filteration</option>
+  <option value="shadow-dom">Shadow DOM</option>
+  <option value="ng-template">NG Template</option>
+  <option value="matchip">Mat-Chip</option>
+</select>
+<router-outlet></router-outlet>
+  <!-- <app-output-decorator (childCData)="onchange($event)"></app-output-decorator>  
 <br><br><br> 
   <h3>Parent Component</h3>
   {{dataOfParentCom}}
-    <!-- <app-chartjs></app-chartjs>   -->
+     <app-chartjs></app-chartjs>    
 <router-outlet></router-outlet>
 <hr>
 <app-input-decorator [appdata]="appComponentData"></app-input-decorator>
@@ -26,4 +30,4 @@ B-Component<app-b-component></app-b-component>
 <p>App Component Paragraph Content inside shadow-dom component form app-component</p>
 <h3>App Component Heading</h3>
 <app-shadow-dom>
-</app-shadow-dom>
+</app-shadow-dom> -->

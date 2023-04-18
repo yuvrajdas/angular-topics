@@ -18,4 +18,12 @@ export class UsersService {
     
     this.compAData.next(data);
   }
+
+  getMatChipData(){
+    return this.http.get('http://localhost:3000/matchip')
+  }
+
+  postMatChipData(payload:any){
+    return this.http.post('http://localhost:3000/matchip',payload);
+  }
 }
