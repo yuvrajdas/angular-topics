@@ -10,6 +10,7 @@ import { SearchFilterationComponent } from './search-filteration/search-filterat
 import { ShadowDomComponent } from './shadow-dom/shadow-dom.component';
 import { NgtemplateComponent } from './ngtemplate/ngtemplate.component';
 import { MatchipComponent } from './matchip/matchip.component';
+import { HostListernerComponent } from './host-listerner/host-listerner.component';
 
 const routes: Routes = [
   {
@@ -51,6 +52,10 @@ const routes: Routes = [
   {
     path:"matchip",
     component:MatchipComponent
+  },
+  {
+    path:'host-listener',
+    component:HostListernerComponent
   }
 ];
 

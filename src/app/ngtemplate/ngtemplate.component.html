@@ -1,7 +1,26 @@
-<p *ngIf="isValid">
+<!-- <p *ngIf="isValid else elseblock">
     Hi am ngIf coditional binding
 </p>
-
-  <ng-template>
+<button (click)="isValid = !isValid">Toggle</button>
+  <ng-template #elseblock>
     <p>Hello I am Ng-Template</p>
- </ng-template>  
+ </ng-template>   -->
+
+ <!-- -------------------------------------------------------------------------- -->
+
+<!-- <div *ngIf="conA; then login else if conB then logout; else nothing"></div> -->
+<div *ngIf="conditionA; then templateA else templateB">
+</div>
+
+<ng-template #templateA>
+  <p>Template A content</p>
+</ng-template>
+
+
+<ng-template #templateB>
+  <p>Template B content</p>
+</ng-template>
+
+<ng-template #templateC>
+  <p>Template C content</p>
+</ng-template>

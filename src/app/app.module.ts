@@ -31,6 +31,8 @@ import { BComponentComponent } from './b-component/b-component.component';
 import { ShadowDomComponent } from './shadow-dom/shadow-dom.component';
 import { NgtemplateComponent } from './ngtemplate/ngtemplate.component';
 import { MatchipComponent } from './matchip/matchip.component';
+import {MAT_DIALOG_DATA, MatDialogModule, MatDialogRef} from '@angular/material/dialog';
+import { HostListernerComponent } from './host-listerner/host-listerner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,8 +52,11 @@ import { MatchipComponent } from './matchip/matchip.component';
     ShadowDomComponent,
     NgtemplateComponent,
     MatchipComponent,
+    HostListernerComponent,
   ],
   imports: [
+    MatDialogModule,
+    MatTableModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -69,8 +74,9 @@ import { MatchipComponent } from './matchip/matchip.component';
     NgChartsModule
   ],
   providers: [
-    {provide:HTTP_INTERCEPTORS, useClass:HeadersInterceptor, multi:true}
+    {provide:HTTP_INTERCEPTORS, useClass:HeadersInterceptor, multi:true},
+    { provide: MAT_DIALOG_DATA, useValue: {} } 
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

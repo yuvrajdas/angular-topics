@@ -9,6 +9,9 @@ export class NgtemplateComponent implements OnInit {
 
   constructor() { }
   isValid = true;
+  conditionA = false;
+  conditionB = false;
+  conditionC = true;
   ngOnInit(): void {
   }
 

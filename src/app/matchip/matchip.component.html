@@ -1,4 +1,50 @@
 <div class="container">
+  <table mat-table [dataSource]="matTableDataSource">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>ID</th>
+      <td mat-cell *matCellDef="let i=index">{{i+1}}</td>
+    </ng-container>
+    <ng-container matColumnDef="category">
+      <th mat-header-cell *matHeaderCellDef>Category</th>
+      <td mat-cell *matCellDef="let element">{{element.category}}</td>
+    </ng-container>
+    <ng-container matColumnDef="categoryList">
+      <th mat-header-cell *matHeaderCellDef>Category List</th>
+      <td mat-cell *matCellDef="let element">{{element.categoryLists}}</td>
+    </ng-container>
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td mat-cell *matCellDef="let element">
+        <button (click)="editChip(element)" style="width: 40px;">E</button>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns:displayedColumns;"></tr>
+  </table> 
+
+  <!-- <table mat-table [dataSource]="matTableDataSource" class="mat-elevation-z8">
+ 
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let i=index"> {{i+1}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="category">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="categoryList">
+      <th mat-header-cell *matHeaderCellDef> Weight </th>
+      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table> -->
+</div>
+<ng-template #templateRef  let-data="data">
+  {{data | json}}
     <form [formGroup]="chipForm">
         <mat-form-field>
             <mat-label>Category</mat-label>
@@ -22,9 +68,14 @@
           <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
             <mat-option *ngFor="let fruit of filteredFruits | async" [value]="fruit">
               {{fruit}}
-            </mat-option>
+            </mat-option>    
           </mat-autocomplete>
         </mat-form-field>
         <button (click)="SubmitForm()">Submit</button>
     </form>
-</div>
+</ng-template>
+
+<ng-container >
+  <ng-template *ngTemplateOutlet="templateRef;">
+  </ng-template>
+</ng-container>
