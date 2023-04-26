@@ -12,7 +12,11 @@
   <option value="ng-template">NG Template</option>
   <option value="matchip">Mat-Chip</option>
   <option value="host-listener">Host Listener</option>
+  <option value="view-child">View Child</option>
 </select>
+<app-child #childComponent ></app-child> 
+<button (click)="increment()">+</button>
+<button (click)="decrement()">-</button>
 <router-outlet></router-outlet>
   <!-- <app-output-decorator (childCData)="onchange($event)"></app-output-decorator>  
 <br><br><br> 

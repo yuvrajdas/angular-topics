@@ -11,6 +11,7 @@ import { ShadowDomComponent } from './shadow-dom/shadow-dom.component';
 import { NgtemplateComponent } from './ngtemplate/ngtemplate.component';
 import { MatchipComponent } from './matchip/matchip.component';
 import { HostListernerComponent } from './host-listerner/host-listerner.component';
+import { ChildComponent } from './child/child.component';
 
 const routes: Routes = [
   {
@@ -56,6 +57,10 @@ const routes: Routes = [
   {
     path:'host-listener',
     component:HostListernerComponent
+  },
+  {
+    path:'view-child',
+    component:ChildComponent
   }
 ];
 

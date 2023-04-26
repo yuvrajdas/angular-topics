@@ -33,6 +33,7 @@ import { NgtemplateComponent } from './ngtemplate/ngtemplate.component';
 import { MatchipComponent } from './matchip/matchip.component';
 import {MAT_DIALOG_DATA, MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import { HostListernerComponent } from './host-listerner/host-listerner.component';
+import { ChildComponent } from './child/child.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +54,7 @@ import { HostListernerComponent } from './host-listerner/host-listerner.componen
     NgtemplateComponent,
     MatchipComponent,
     HostListernerComponent,
+    ChildComponent,
   ],
   imports: [
     MatDialogModule,
