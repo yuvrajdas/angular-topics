@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-8 m-auto">
+            <button class="mb-4" style="background-color: rgb(112, 197, 55);" (click)="addInputFields()" mat-button>Add More Fields</button>
+            <form [formGroup]="testForm">
+                <div formArrayName="testFormDatas">
+                    <div class="row" *ngFor="let data of testFormDatasControls; let i = index" [formGroupName]="i">
+                        <!-- Email field -->
+                        <div class="col-md-5">
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>Email</mat-label>
+                                <input matInput type="text" formControlName="emailFormControl">
+                            </mat-form-field>   
+                        </div>
+                        <!-- Mobile field -->
+                        <div class="col-md-5">
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>Mobile</mat-label>
+                                <input matInput type="text" formControlName="mobileFormControl">
+                            </mat-form-field>
+                        </div>
+
+                        <div class="col-md-2" (click)="deleteInputFields(i)">
+                            <button mat-button class="mt-3"><mat-icon>close</mat-icon></button>
+                        </div>
+                    </div>
+                </div>
+                <button (click)="submit()">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,96 @@
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+  </button>
+  <mat-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="personalInfoFormGroup">
+        <div style="width: 400px;">
+            <form [formGroup]="personalInfoFormGroup">
+                <ng-template matStepLabel>Fill out your personal details</ng-template>
+                <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="First name" formControlName="firstName" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" style="width: 100%;">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput placeholder="Last name" formControlName="lastName" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" style="width: 100%;">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Email" formControlName="email" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" style="width: 100%;">
+                    <mat-label>Mobile</mat-label>
+                    <input matInput placeholder="Mobile" formControlName="mobile" required>
+                </mat-form-field>
+                <div>
+                <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </div>
+    </mat-step>
+    <mat-step [stepControl]="paymentDeatilsFormGroup" label="Fill out your Payment Details">
+      <form [formGroup]="paymentDeatilsFormGroup">
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Card Number</mat-label>
+          <input matInput formControlName="cardNumber" placeholder="Your card no"
+                 required>
+        </mat-form-field>
+        <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Expiry Date</mat-label>
+            <input matInput formControlName="expiryData" placeholder="eg. 07/25 (MM/YY)"
+                   required>
+          </mat-form-field>
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>CVV</mat-label>
+            <input matInput formControlName="cvv" placeholder="card cvv"
+                   required>
+          </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="paymentDeatilsFormGroup" label="Fill out your shipping Details">
+        <form [formGroup]="paymentDeatilsFormGroup">
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Address Line 1</mat-label>
+            <input matInput formControlName="addressLine1" 
+                   required>
+          </mat-form-field>
+          <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>Address Line 2</mat-label>
+              <input matInput formControlName="addressLine2" 
+                     required>
+            </mat-form-field>
+            <mat-form-field appearance="outline" style="width: 100%;">
+              <mat-label>City </mat-label>
+              <input matInput formControlName="city" 
+                     required>
+            </mat-form-field>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>City </mat-label>
+                <input matInput formControlName="state"  
+                       required>
+              </mat-form-field>
+              <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>City </mat-label>
+                <input matInput formControlName="country"  
+                       required>
+              </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-stepper>

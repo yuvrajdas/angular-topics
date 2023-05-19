@@ -12,6 +12,8 @@ import { NgtemplateComponent } from './ngtemplate/ngtemplate.component';
 import { MatchipComponent } from './matchip/matchip.component';
 import { HostListernerComponent } from './host-listerner/host-listerner.component';
 import { ChildComponent } from './child/child.component';
+import { SteperComponent } from './steper/steper.component';
+import { TodoAppComponent } from './todo-app/todo-app.component';
 
 const routes: Routes = [
   {
@@ -61,6 +63,14 @@ const routes: Routes = [
   {
     path:'view-child',
     component:ChildComponent
+  },
+  {
+    path:'steper',
+    component:SteperComponent
+  },
+  {
+    path:'todo-app',
+    component:TodoAppComponent
   }
 ];
 

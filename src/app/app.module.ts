@@ -34,6 +34,9 @@ import { MatchipComponent } from './matchip/matchip.component';
 import {MAT_DIALOG_DATA, MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import { HostListernerComponent } from './host-listerner/host-listerner.component';
 import { ChildComponent } from './child/child.component';
+import { SteperComponent } from './steper/steper.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import { TodoAppComponent } from './todo-app/todo-app.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,8 +58,11 @@ import { ChildComponent } from './child/child.component';
     MatchipComponent,
     HostListernerComponent,
     ChildComponent,
+    SteperComponent,
+    TodoAppComponent,
   ],
   imports: [
+    MatStepperModule,
     MatDialogModule,
     MatTableModule,
     BrowserModule,
