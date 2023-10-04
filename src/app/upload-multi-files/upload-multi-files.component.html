@@ -1,0 +1,13 @@
+<div class="dropzone">
+    <input type="file" #fileUpload id="fileUploadRef" multiple (change)="fileUploadHandler($event)"> 
+    <br>
+    <h3>Drop file here <img style="margin-bottom: 5px; margin-left: 5px;" src="./assets/icons/upload.svg" alt=""></h3>
+    <br>
+    <h3>Or</h3>   <br>
+    <label for="">Browse  file</label>
+</div>
+<div style="position: relative; top :50px; text-align: center;">
+    <ul  >
+        <li *ngFor="let item of filesData"><span style="color: #0000;">{{item}}</span> <img src="./assets/icons/x-circle.svg" alt=""></li>
+    </ul>
+</div>

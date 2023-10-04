@@ -14,6 +14,7 @@ import { HostListernerComponent } from './host-listerner/host-listerner.componen
 import { ChildComponent } from './child/child.component';
 import { SteperComponent } from './steper/steper.component';
 import { TodoAppComponent } from './todo-app/todo-app.component';
+import { UploadMultiFilesComponent } from './upload-multi-files/upload-multi-files.component';
 
 const routes: Routes = [
   {
@@ -71,6 +72,10 @@ const routes: Routes = [
   {
     path:'todo-app',
     component:TodoAppComponent
+  },
+  {
+    path:'upload-multi-files',
+    component:UploadMultiFilesComponent
   }
 ];
 

@@ -37,6 +37,7 @@ import { ChildComponent } from './child/child.component';
 import { SteperComponent } from './steper/steper.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import { TodoAppComponent } from './todo-app/todo-app.component';
+import { UploadMultiFilesComponent } from './upload-multi-files/upload-multi-files.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,6 +61,7 @@ import { TodoAppComponent } from './todo-app/todo-app.component';
     ChildComponent,
     SteperComponent,
     TodoAppComponent,
+    UploadMultiFilesComponent,
   ],
   imports: [
     MatStepperModule,
